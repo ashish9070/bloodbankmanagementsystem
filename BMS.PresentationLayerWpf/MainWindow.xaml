@@ -1,0 +1,147 @@
+﻿<Window xmlns:CustomControls="clr-namespace:BMS.PresentationLayerWpf.CustomControls"  
+        x:Class="BMS.PresentationLayerWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local ="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
+        
+        Title="Boold Bank Management System"
+        WindowState="Maximized"
+        ShowInTaskbar="True"
+        Loaded="Window_Loaded"
+        Icon="./Images/drop2.png"
+        >
+
+    <Window.Resources>
+
+
+        <!--Style Key : Primary Header-->
+        <Style x:Key="styleBtnTabHeader">
+            <Setter Property="Control.FontFamily" Value="Segoe UI" />
+            <Setter Property="Control.FontSize" Value="12" />
+            <Setter Property="Control.FontStyle" Value="Italic" />
+            <Setter Property="Control.FontWeight" Value="Bold" />
+
+            <Setter Property="Control.Foreground" Value="#ff0000" />
+            <Setter Property="Control.Background" Value="#ffbbbb" />
+            <Setter Property="Control.Padding" Value="2" />
+
+            <Setter Property="Control.HorizontalAlignment" Value="Center" />
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+
+
+        </Style>
+
+        <Style x:Key="styleLblTabHeader">
+            <Setter Property="Control.FontFamily" Value="Segoe UI Semilight" />
+            <Setter Property="Control.FontSize" Value="12" />
+            <Setter Property="Control.Foreground" Value="#000000" />
+            <Setter Property="Control.Padding" Value="5" />
+
+        </Style>
+
+        <Style TargetType="TabItem">
+            <Setter Property="Control.Foreground" Value="#000000" />
+            <Setter Property="Control.Background" Value="#ffffff" />
+
+        </Style>
+
+    </Window.Resources>
+
+    <DockPanel>
+
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="Add New _Admin" ToolTip="Add New Admin to the Blood Bank" Click="MenuItem_FileNewAdmin_Click"></MenuItem>
+                <MenuItem Header="_Change My Settings" Click="MenuItem_FileChangeAdmin_Click"></MenuItem>
+                <MenuItem Header="_Startup Page" Click="MenuItem_FileStartupPage_Click"></MenuItem>
+
+                <Separator/>
+               
+                <MenuItem Header="View _Bank Information" ToolTip="View Admins Associated with Blood Bank" Click="MenuItem_FileBank_Click" ></MenuItem>
+                <MenuItem Header="View _Inventory Information" Click="MenuItem_FileView_Inventory_Click" ToolTip="View Inventory information"></MenuItem>
+                <MenuItem Header="View _Hospital Information" Click="MenuItem_FileView_Hospital_Click"></MenuItem>
+                <MenuItem Header="View _Event Information" Click="MenuItem_FileView_Event_Click"></MenuItem>
+                <MenuItem Header="View _Donor Information" Click="MenuItem_FileView_Donor_Click"></MenuItem>
+                <Separator/>
+
+                <MenuItem Header="_Transfer" Click="MenuItem_Transfer_Inventory_Click"></MenuItem>
+                
+                <Separator/>
+                <MenuItem Header="_Exit" ToolTip="Terminate the Application" Click="MenuItem_FileExit_Click"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="_Add">
+                <MenuItem Header="_Inventory" Click="MenuItem_Add_Inventory_Click"></MenuItem>
+                <MenuItem Header="_Hospital" Click="MenuItem_Add_Hospital_Click"></MenuItem>
+                <MenuItem Header="_Event" Click="MenuItem_Add_Event_Click"></MenuItem>
+                <MenuItem Header="_Donor" Click="MenuItem_Add_Donor_Click"></MenuItem>
+               
+            </MenuItem>
+
+            <MenuItem Header="_View">
+                <MenuItem Header="_Inventory" Click="MenuItem_View_Inventory_Click" ToolTip="View Inventory information"></MenuItem>
+                <MenuItem Header="_Hospital" Click="MenuItem_View_Hospital_Click"></MenuItem>
+                <MenuItem Header="_Event" Click="MenuItem_View_Event_Click"></MenuItem>
+                <MenuItem Header="_Donor" Click="MenuItem_View_Donor_Click"></MenuItem>
+                
+            </MenuItem>
+
+            <MenuItem Header="_Update">
+                <MenuItem Header="_Inventory" Click="MenuItem_Update_Inventory_Click"></MenuItem>
+                <MenuItem Header="_Hospital" Click="MenuItem_Update_Hospital_Click"></MenuItem>
+                <MenuItem Header="_Event" Click="MenuItem_Update_Event_Click"></MenuItem>
+                <MenuItem Header="_Donor" Click="MenuItem_Update_Donor_Click"></MenuItem>
+                
+            </MenuItem>
+
+            <MenuItem Header="_Remove">
+                <MenuItem Header="_Inventory"  Click="MenuItem_Remove_Inventory_Click"></MenuItem>
+                <MenuItem Header="_Hospital" Click="MenuItem_Remove_Hospital_Click"></MenuItem>
+                <MenuItem Header="_Event" Click="MenuItem_Remove_Event_Click"></MenuItem>
+                <MenuItem Header="_Donor" Click="MenuItem_Remove_Donor_Click"></MenuItem>
+                
+            </MenuItem>
+
+
+            <MenuItem Header="_Help">
+                <!--<MenuItem Header="_User Manual" Click="MenuItem_HelpUserManual_Click"></MenuItem>
+                <Separator/>-->
+                <MenuItem Header="_About" Click="MenuItem_HelpAbout_Click"></MenuItem>
+            </MenuItem>
+
+
+            <!--<MenuItem Header="_Tab">
+                <MenuItem Header="_Insert" Click="txtInsert_Click" InputGestureText="Ctrl + N"></MenuItem>
+                <MenuItem Header="_Next" Click="txtNext_Click"></MenuItem>
+                <MenuItem Header="_Select" Click="txtSelect_Click"></MenuItem>
+
+                <MenuItem Header="_Previous" Click="txtPrev_Click"></MenuItem>
+
+                <Separator/>
+                <MenuItem Header="_Delete" Click="txtRemove_Click"></MenuItem>
+            </MenuItem>-->
+
+            <CustomControls:HintedTextBox FontSize="10" Width="200" x:Name="txtSearch" ExecuteQuery="txtSearch_ExecuteQuery"  PlaceHolderText="Enter Search Query">
+
+            </CustomControls:HintedTextBox>
+            <!--Search Box-->
+
+
+        </Menu>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Name="sbTbAppStatus">
+                Ready
+                </TextBlock>
+
+            </StatusBarItem>
+        </StatusBar>
+
+
+        <TabControl Background="DarkGray" Name="tbcPrimary" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        </TabControl>
+
+    </DockPanel>
+</Window>

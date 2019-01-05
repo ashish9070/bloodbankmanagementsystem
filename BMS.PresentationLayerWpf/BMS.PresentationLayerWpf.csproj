@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DD98625-82ED-44C0-A478-57EDF8267B0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BMS.PresentationLayerWpf</RootNamespace>
+    <AssemblyName>BMS.PresentationLayerWpf</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>drop2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dummy Projects\WpfApplication0\packages\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ChildWindows\WindowChildren.xaml.cs">
+      <DependentUpon>WindowChildren.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\WindowPageNotFound.xaml.cs">
+      <DependentUpon>WindowPageNotFound.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\WindowStartup.xaml.cs">
+      <DependentUpon>WindowStartup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\HintedTextBox.cs" />
+    <Compile Include="LoginScreenNS\WindowLogin.xaml.cs">
+      <DependentUpon>WindowLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow_Partial_Actions.cs" />
+    <Compile Include="MainWindow_Partial_Menu.cs" />
+    <Compile Include="MainWindow_Partial_Query.cs" />
+    <Compile Include="MainWindow_Partial_Tabs.cs" />
+    <Compile Include="RegisterWndows\WindowRegisterAdmin.xaml.cs">
+      <DependentUpon>WindowRegisterAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreenNS\WindowSplashScreen.xaml.cs">
+      <DependentUpon>WindowSplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowDataViewer_BloodBank.xaml.cs">
+      <DependentUpon>WindowDataViewer_BloodBank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowDataViewer_Donation.xaml.cs">
+      <DependentUpon>WindowDataViewer_Donation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowDataViewer_Donor.xaml.cs">
+      <DependentUpon>WindowDataViewer_Donor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowDataViewer_Events.xaml.cs">
+      <DependentUpon>WindowDataViewer_Events.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowDataViewer_Hospital.xaml.cs">
+      <DependentUpon>WindowDataViewer_Hospital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowDataViewer_Inventory.xaml.cs">
+      <DependentUpon>WindowDataViewer_Inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowDataViewer_Transaction.xaml.cs">
+      <DependentUpon>WindowDataViewer_Transaction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowManage_BloodBank.xaml.cs">
+      <DependentUpon>WindowManage_BloodBank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowManage_Donation.xaml.cs">
+      <DependentUpon>WindowManage_Donation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowManage_Donor.xaml.cs">
+      <DependentUpon>WindowManage_Donor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowManage_Events.xaml.cs">
+      <DependentUpon>WindowManage_Events.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowManage_Hospital.xaml.cs">
+      <DependentUpon>WindowManage_Hospital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowManage_Inventory.xaml.cs">
+      <DependentUpon>WindowManage_Inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowManage_Transaction.xaml.cs">
+      <DependentUpon>WindowManage_Transaction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UISubWindows\WindowStartup.xaml.cs">
+      <DependentUpon>WindowStartup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserManualDocumentation\HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ActionMode.cs" />
+    <Compile Include="Utility\ApplicationInfo.cs" />
+    <Compile Include="Utility\Charting.cs" />
+    <Compile Include="Utility\ColorShades.cs" />
+    <Compile Include="Utility\MessageHandler.cs" />
+    <Compile Include="Utility\HelperMethods.cs" />
+    <Compile Include="Utility\HotKeysMap.cs" />
+    <Page Include="ChildWindows\WindowChildren.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\WindowPageNotFound.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\WindowStartup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginScreenNS\WindowLogin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="RegisterWndows\WindowRegisterAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplashScreenNS\WindowSplashScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UISubWindows\WindowDataViewer_BloodBank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowDataViewer_Donation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowDataViewer_Donor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowDataViewer_Events.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowDataViewer_Hospital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowDataViewer_Inventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowDataViewer_Transaction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowManage_BloodBank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowManage_Donation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowManage_Donor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowManage_Events.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowManage_Hospital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowManage_Inventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowManage_Transaction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UISubWindows\WindowStartup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserManualDocumentation\HelpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Theme\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BMS.BusinessLayer\BMS.BusinessLayer.csproj">
+      <Project>{6c3617d4-a3b1-4439-9d2e-d70cefa7e1d8}</Project>
+      <Name>BMS.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BMS.Entities\BMS.Entities.csproj">
+      <Project>{9e53e7fb-a257-4d95-8dd9-69cf777f89de}</Project>
+      <Name>BMS.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BMS.Exceptions\BMS.Exceptions.csproj">
+      <Project>{6a36d5ef-1364-4cdf-94ab-205967e917e7}</Project>
+      <Name>BMS.Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\drop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="drop2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
