@@ -1,0 +1,5 @@
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\bin\Debug\BMS.Entities.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\bin\Debug\BMS.Entities.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\obj\Debug\BMS.Entities.csprojResolveAssemblyReference.cache
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\obj\Debug\BMS.Entities.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\obj\Debug\BMS.Entities.pdb

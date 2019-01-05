@@ -1,0 +1,11 @@
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\bin\Release\BMS.Entities.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\bin\Release\BMS.Entities.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\obj\Release\BMS.Entities.csprojResolveAssemblyReference.cache
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\obj\Release\BMS.Entities.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Entities\obj\Release\BMS.Entities.pdb
+D:\Blood Bank Management\SolutionBMS\BMS.Entities\bin\Release\BMS.Entities.dll
+D:\Blood Bank Management\SolutionBMS\BMS.Entities\bin\Release\BMS.Entities.pdb
+D:\Blood Bank Management\SolutionBMS\BMS.Entities\obj\Release\BMS.Entities.csprojAssemblyReference.cache
+D:\Blood Bank Management\SolutionBMS\BMS.Entities\obj\Release\BMS.Entities.csproj.CoreCompileInputs.cache
+D:\Blood Bank Management\SolutionBMS\BMS.Entities\obj\Release\BMS.Entities.dll
+D:\Blood Bank Management\SolutionBMS\BMS.Entities\obj\Release\BMS.Entities.pdb
