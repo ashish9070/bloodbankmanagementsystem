@@ -1,0 +1,11 @@
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\bin\Release\BMS.Exceptions.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\bin\Release\BMS.Exceptions.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\obj\Release\BMS.Exceptions.csprojResolveAssemblyReference.cache
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\obj\Release\BMS.Exceptions.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\obj\Release\BMS.Exceptions.pdb
+D:\Blood Bank Management\SolutionBMS\BMS.Exceptions\bin\Release\BMS.Exceptions.dll
+D:\Blood Bank Management\SolutionBMS\BMS.Exceptions\bin\Release\BMS.Exceptions.pdb
+D:\Blood Bank Management\SolutionBMS\BMS.Exceptions\obj\Release\BMS.Exceptions.csprojAssemblyReference.cache
+D:\Blood Bank Management\SolutionBMS\BMS.Exceptions\obj\Release\BMS.Exceptions.csproj.CoreCompileInputs.cache
+D:\Blood Bank Management\SolutionBMS\BMS.Exceptions\obj\Release\BMS.Exceptions.dll
+D:\Blood Bank Management\SolutionBMS\BMS.Exceptions\obj\Release\BMS.Exceptions.pdb

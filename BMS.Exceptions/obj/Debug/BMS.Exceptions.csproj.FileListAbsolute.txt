@@ -1,0 +1,5 @@
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\bin\Debug\BMS.Exceptions.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\bin\Debug\BMS.Exceptions.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\obj\Debug\BMS.Exceptions.csprojResolveAssemblyReference.cache
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\obj\Debug\BMS.Exceptions.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.Exceptions\obj\Debug\BMS.Exceptions.pdb
