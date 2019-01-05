@@ -1,0 +1,73 @@
+﻿<Window x:Class="BMS.PresentationLayer.SplashScreenNS.WindowSplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowSplashScreen" WindowStyle="None"
+        Height="300" Width="500"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterScreen"
+        Background="#f52"
+        >
+    <Window.Resources>
+
+
+        <!--Style Key : Primary Header-->
+        <Style x:Key="styleTxbPrimaryHeader">
+            <Setter Property="Control.FontFamily" Value="Segoe UI Light" />
+            <Setter Property="Control.FontSize" Value="60" />
+            <Setter Property="Control.Foreground" Value="#f2cbcb" />
+        </Style>
+
+        <!--Style Key : Primary Sub Header-->
+        <Style x:Key="styleTxbPrimarySubHeader">
+            <Setter Property="Control.FontFamily" Value="Segoe UI Light" />
+            <Setter Property="Control.FontSize" Value="30" />
+            <Setter Property="Control.Margin" Value="10" />
+            <Setter Property="Control.Foreground" Value="#f2cbcb" />
+        </Style>
+
+        <Style BasedOn="{StaticResource styleTxbPrimarySubHeader}" x:Key="styleTxbLoadingMessage">
+            <Style.Setters>
+                <Setter Property="Control.FontSize" Value="15" />
+                <Setter Property="Control.Margin" Value="10" />
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="stylePsbProgramStartup" TargetType="{x:Type ProgressBar}">
+            <Setter Property="Background" Value="#ffffff"/>
+        </Style>
+        
+    </Window.Resources>
+    
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        
+        <TextBlock Style="{StaticResource styleTxbPrimaryHeader}"
+                   HorizontalAlignment="Center"
+                   Name="txbApplicationHeader" Text="Blood Bank" />
+        <TextBlock Style="{StaticResource styleTxbPrimarySubHeader}" 
+                   HorizontalAlignment="Center" FontFamily="Segoe UI Light" 
+                    Name="txbApplicationSubHeader" Text="Management System" />
+
+        <!--<Button Name="btnClose" Width="10" Content="x" Click="btnClose_Click"></Button>-->
+
+        <!--<TextBlock Text="{Binding ElementName=psbProgramStartup, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+        <TextBlock Style="{StaticResource styleTxbLoadingMessage}"
+                   HorizontalAlignment="Center"
+                   Name="txbLoadingMessage" Text="Loading..." />
+        <!--<ProgressBar Name="psbProgramStartup" 
+                     Style="{StaticResource stylePsbProgramStartup}" 
+                     Minimum="0" Maximum="100" Value="0"/>-->
+
+        <ProgressBar Value="0" Minimum="0" Maximum="100" Height="20" Name="psbProgramStartup">
+            <ProgressBar.Template>
+                <ControlTemplate>
+                    <Canvas Width="300" Height="20">
+                        <Border Name="PART_Track" Height="10" Width="300" Background="LightPink" CornerRadius="2" BorderBrush="LightPink" BorderThickness="1"></Border>
+                        <Border CornerRadius="2"  Name="PART_Indicator" Height="10" Background="#f31" BorderBrush="LightPink"  BorderThickness="1"></Border>
+                    </Canvas>
+                </ControlTemplate>
+            </ProgressBar.Template>
+        </ProgressBar>
+        
+    </StackPanel>
+</Window>

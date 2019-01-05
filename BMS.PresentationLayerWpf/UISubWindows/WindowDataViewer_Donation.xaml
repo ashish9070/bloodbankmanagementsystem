@@ -1,0 +1,69 @@
+﻿<Window x:Class="BMS.PresentationLayerWpf.UISubWindows.WindowDataViewer_Donation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowDataViewer_Donation">
+    <Window.Resources>
+
+
+
+        <Style x:Key="styleCalendarDayButtonStyle">
+            <!--<Setter Property="Control.FontSize" Value="15"/>-->
+        </Style>
+
+        <Style x:Key="styleCalendarButtonStyle">
+            <!--<Setter Property="Control.FontSize" Value="12"/>-->
+        </Style>
+
+        <Style x:Key="styleCalendarItemStyle">
+            <!--<Setter Property="Control.FontSize" Value="15"/>-->
+        </Style>
+
+    </Window.Resources>
+    <DockPanel Name="childPanel">
+
+
+        <ScrollViewer Name="scrollview" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+
+            <Grid  Name="grandChildPanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+                <StackPanel>
+                    <DataGrid IsReadOnly="False" Name="dataGridPrimary" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <DataGrid.Columns>
+
+                            <DataGridTemplateColumn Header="Controls">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Remove" Click="btnControl_Click"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            
+                            <!--public int BloodDonationID { get; set; }
+                            public int BloodDonorID { get; set; }
+                            public DateTime BloodDonationDate { get; set; }
+                            public int NumberofBottle { get; set; }
+                            public decimal Weight { get; set; }
+                            public decimal HBCount { get; set; }
+                            public int BloodDonationCampID { get; set; }
+                            public int BloodInventoryID { get; set; }-->
+
+                            <DataGridTextColumn Header="Donation ID" Binding="{Binding BloodDonationID}" />
+                            <DataGridTextColumn Header="Donor ID" Binding="{Binding BloodDonorID}" />
+                            <DataGridTextColumn Header="Bottles of Blood Donated" Binding="{Binding NumberofBottle}" />
+                            <DataGridTextColumn Header="Weight (kg)" Binding="{Binding Weight}" />
+                            <DataGridTextColumn Header="Hb Count" Binding="{Binding HBCount}" />
+
+                            <DataGridTextColumn Header="Donation Camp ID" Binding="{Binding BloodDonationCampID}" />
+                            <DataGridTextColumn Header="Inventory" Binding="{Binding BloodInventoryID}" />
+                            <DataGridTextColumn Header="Date Donated" Binding="{Binding BloodDonationDate}" />
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </StackPanel>
+            </Grid>
+
+
+        </ScrollViewer>
+    </DockPanel>
+</Window>
