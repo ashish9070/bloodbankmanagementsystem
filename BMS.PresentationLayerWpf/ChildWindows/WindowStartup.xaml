@@ -1,0 +1,63 @@
+﻿<Window x:Class="BMS.PresentationLayerWpf.ChildWindows.WindowStartup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowStartup">
+    <Window.Resources>
+
+
+
+        <Style x:Key="styleCalendarDayButtonStyle">
+            <!--<Setter Property="Control.FontSize" Value="15"/>-->
+        </Style>
+
+        <Style x:Key="styleCalendarButtonStyle">
+            <!--<Setter Property="Control.FontSize" Value="12"/>-->
+        </Style>
+
+        <Style x:Key="styleCalendarItemStyle">
+            <!--<Setter Property="Control.FontSize" Value="15"/>-->
+        </Style>
+
+    </Window.Resources>
+    <DockPanel Name="childPanel">
+       
+        
+        <ScrollViewer Name="scrollview" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+
+            <Grid  Name="grandChildPanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+                <StackPanel>
+                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+
+
+
+                <Calendar Name="cal"
+                  
+                  CalendarDayButtonStyle="{StaticResource styleCalendarDayButtonStyle}"
+                  CalendarButtonStyle="{StaticResource styleCalendarButtonStyle}"
+                  CalendarItemStyle="{StaticResource styleCalendarItemStyle}"
+                  
+                  DisplayDateStart="1/1/2017"
+                  DisplayDateEnd="1/1/2030"
+                  IsTodayHighlighted="True"
+                  SelectionMode="MultipleRange"
+                  SelectedDatesChanged="cal_SelectedDatesChanged"
+                  FontSize="30"
+                  >
+
+                </Calendar>
+
+                <ListView Name="list" Width="200"></ListView>
+            </StackPanel>
+      
+            <Button>hello</Button>
+            <Button>hello</Button>
+            <Button>hello</Button>
+                </StackPanel>
+        </Grid>
+            
+
+        </ScrollViewer>
+    </DockPanel>
+   
+</Window>

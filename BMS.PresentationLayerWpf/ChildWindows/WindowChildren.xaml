@@ -1,0 +1,11 @@
+﻿<Window x:Class="BMS.PresentationLayerWpf.ChildWindows.WindowChildren"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowChildren">
+    
+    <DockPanel ScrollViewer.CanContentScroll="True" Name="childWindowHolder"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        
+    </DockPanel>
+       
+</Window>
