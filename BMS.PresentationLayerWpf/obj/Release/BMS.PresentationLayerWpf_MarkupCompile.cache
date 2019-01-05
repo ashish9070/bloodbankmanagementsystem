@@ -1,0 +1,20 @@
+﻿BMS.PresentationLayerWpf
+
+
+winexe
+C#
+.cs
+D:\Blood Bank Management\SolutionBMS\BMS.PresentationLayerWpf\obj\Release\
+BMS.PresentationLayerWpf
+none
+false
+TRACE
+D:\Blood Bank Management\SolutionBMS\BMS.PresentationLayerWpf\App.xaml
+23-1187890662
+
+39-1385559684
+17-428305220
+ChildWindows\WindowChildren.xaml;ChildWindows\WindowPageNotFound.xaml;ChildWindows\WindowStartup.xaml;LoginScreenNS\WindowLogin.xaml;MainWindow.xaml;RegisterWndows\WindowRegisterAdmin.xaml;SplashScreenNS\WindowSplashScreen.xaml;UISubWindows\WindowDataViewer_BloodBank.xaml;UISubWindows\WindowDataViewer_Donation.xaml;UISubWindows\WindowDataViewer_Donor.xaml;UISubWindows\WindowDataViewer_Events.xaml;UISubWindows\WindowDataViewer_Hospital.xaml;UISubWindows\WindowDataViewer_Inventory.xaml;UISubWindows\WindowDataViewer_Transaction.xaml;UISubWindows\WindowManage_BloodBank.xaml;UISubWindows\WindowManage_Donation.xaml;UISubWindows\WindowManage_Donor.xaml;UISubWindows\WindowManage_Events.xaml;UISubWindows\WindowManage_Hospital.xaml;UISubWindows\WindowManage_Inventory.xaml;UISubWindows\WindowManage_Transaction.xaml;UISubWindows\WindowStartup.xaml;UserManualDocumentation\HelpWindow.xaml;
+
+False
+
