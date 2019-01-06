@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BMSNamespace" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BmsBloodBank">
+    <Key>
+      <PropertyRef Name="BloodBankID" />
+    </Key>
+    <Property Name="BloodBankID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BloodBankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SysId" Type="String" MaxLength="128" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="BmsBloodInventory" Relationship="Self.fk_BmsBmsBloodBank_BloodBankID" FromRole="BmsBloodBank" ToRole="BmsBloodInventory" />
+  </EntityType>
+  <EntityType Name="BmsBloodDonationCamp">
+    <Key>
+      <PropertyRef Name="BloodDonationCampID" />
+    </Key>
+    <Property Name="BloodDonationCampID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CampName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BloodBank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CampStartDate" Type="DateTime" Precision="3" />
+    <Property Name="CampEndDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BmsBloodDonor">
+    <Key>
+      <PropertyRef Name="BloodDonorID" />
+    </Key>
+    <Property Name="BloodDonorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BloodGroup" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BmsBloodDonorDonation" Relationship="Self.fk_BmsBloodDonorDonation_BloodDonorID" FromRole="BmsBloodDonor" ToRole="BmsBloodDonorDonation" />
+  </EntityType>
+  <EntityType Name="BmsBloodDonorDonation">
+    <Key>
+      <PropertyRef Name="BloodDonationID" />
+    </Key>
+    <Property Name="BloodDonationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BloodDonationDate" Type="DateTime" Precision="3" />
+    <Property Name="NumberofBottle" Type="Int32" />
+    <Property Name="Weight" Type="Int32" />
+    <Property Name="HBCount" Type="Int32" />
+    <NavigationProperty Name="BmsBloodDonor" Relationship="Self.fk_BmsBloodDonorDonation_BloodDonorID" FromRole="BmsBloodDonorDonation" ToRole="BmsBloodDonor" />
+  </EntityType>
+  <EntityType Name="BmsBloodInventory">
+    <Key>
+      <PropertyRef Name="BloodInventoryID" />
+    </Key>
+    <Property Name="BloodInventoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BloodGroup" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="NumberofBottles" Type="Int32" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BmsBloodBank" Relationship="Self.fk_BmsBmsBloodBank_BloodBankID" FromRole="BmsBloodInventory" ToRole="BmsBloodBank" />
+  </EntityType>
+  <EntityType Name="BmsHospital">
+    <Key>
+      <PropertyRef Name="HospitalID" />
+    </Key>
+    <Property Name="HospitalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HospitalName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="fk_BmsBmsBloodBank_BloodBankID">
+    <End Role="BmsBloodBank" Type="Self.BmsBloodBank" Multiplicity="0..1" />
+    <End Role="BmsBloodInventory" Type="Self.BmsBloodInventory" Multiplicity="*" />
+  </Association>
+  <Association Name="fk_BmsBloodDonorDonation_BloodDonorID">
+    <End Role="BmsBloodDonor" Type="Self.BmsBloodDonor" Multiplicity="1" />
+    <End Role="BmsBloodDonorDonation" Type="Self.BmsBloodDonorDonation" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="BMSContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BmsBloodBank" EntityType="Self.BmsBloodBank" />
+    <EntitySet Name="BmsBloodDonationCamp" EntityType="Self.BmsBloodDonationCamp" />
+    <EntitySet Name="BmsBloodDonor" EntityType="Self.BmsBloodDonor" />
+    <EntitySet Name="BmsBloodDonorDonation" EntityType="Self.BmsBloodDonorDonation" />
+    <EntitySet Name="BmsBloodInventory" EntityType="Self.BmsBloodInventory" />
+    <EntitySet Name="BmsHospital" EntityType="Self.BmsHospital" />
+    <AssociationSet Name="fk_BmsBmsBloodBank_BloodBankID" Association="Self.fk_BmsBmsBloodBank_BloodBankID">
+      <End Role="BmsBloodBank" EntitySet="BmsBloodBank" />
+      <End Role="BmsBloodInventory" EntitySet="BmsBloodInventory" />
+    </AssociationSet>
+    <AssociationSet Name="fk_BmsBloodDonorDonation_BloodDonorID" Association="Self.fk_BmsBloodDonorDonation_BloodDonorID">
+      <End Role="BmsBloodDonor" EntitySet="BmsBloodDonor" />
+      <End Role="BmsBloodDonorDonation" EntitySet="BmsBloodDonorDonation" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

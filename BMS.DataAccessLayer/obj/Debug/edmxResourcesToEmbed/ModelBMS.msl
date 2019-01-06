@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BMSNamespaceStoreContainer" CdmEntityContainer="BMSContext">
+    <EntitySetMapping Name="BmsBloodBank">
+      <EntityTypeMapping TypeName="BMSNamespace.BmsBloodBank">
+        <MappingFragment StoreEntitySet="BmsBloodBank">
+          <ScalarProperty Name="BloodBankID" ColumnName="BloodBankID" />
+          <ScalarProperty Name="BloodBankName" ColumnName="BloodBankName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="SysId" ColumnName="SysId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BmsBloodDonationCamp">
+      <EntityTypeMapping TypeName="BMSNamespace.BmsBloodDonationCamp">
+        <MappingFragment StoreEntitySet="BmsBloodDonationCamp">
+          <ScalarProperty Name="BloodDonationCampID" ColumnName="BloodDonationCampID" />
+          <ScalarProperty Name="CampName" ColumnName="CampName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="BloodBank" ColumnName="BloodBank" />
+          <ScalarProperty Name="CampStartDate" ColumnName="CampStartDate" />
+          <ScalarProperty Name="CampEndDate" ColumnName="CampEndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BmsBloodDonor">
+      <EntityTypeMapping TypeName="BMSNamespace.BmsBloodDonor">
+        <MappingFragment StoreEntitySet="BmsBloodDonor">
+          <ScalarProperty Name="BloodDonorID" ColumnName="BloodDonorID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BmsBloodDonorDonation">
+      <EntityTypeMapping TypeName="BMSNamespace.BmsBloodDonorDonation">
+        <MappingFragment StoreEntitySet="BmsBloodDonorDonation">
+          <ScalarProperty Name="BloodDonationID" ColumnName="BloodDonationID" />
+          <ScalarProperty Name="BloodDonationDate" ColumnName="BloodDonationDate" />
+          <ScalarProperty Name="NumberofBottle" ColumnName="NumberofBottle" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="HBCount" ColumnName="HBCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BmsBloodInventory">
+      <EntityTypeMapping TypeName="BMSNamespace.BmsBloodInventory">
+        <MappingFragment StoreEntitySet="BmsBloodInventory">
+          <ScalarProperty Name="BloodInventoryID" ColumnName="BloodInventoryID" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="NumberofBottles" ColumnName="NumberofBottles" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BmsHospital">
+      <EntityTypeMapping TypeName="BMSNamespace.BmsHospital">
+        <MappingFragment StoreEntitySet="BmsHospital">
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="fk_BmsBmsBloodBank_BloodBankID" TypeName="BMSNamespace.fk_BmsBmsBloodBank_BloodBankID" StoreEntitySet="BmsBloodInventory">
+      <EndProperty Name="BmsBloodBank">
+        <ScalarProperty Name="BloodBankID" ColumnName="BloodBankID" />
+      </EndProperty>
+      <EndProperty Name="BmsBloodInventory">
+        <ScalarProperty Name="BloodInventoryID" ColumnName="BloodInventoryID" />
+      </EndProperty>
+      <Condition IsNull="false" ColumnName="BloodBankID" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="fk_BmsBloodDonorDonation_BloodDonorID" TypeName="BMSNamespace.fk_BmsBloodDonorDonation_BloodDonorID" StoreEntitySet="BmsBloodDonorDonation">
+      <EndProperty Name="BmsBloodDonor">
+        <ScalarProperty Name="BloodDonorID" ColumnName="BloodDonorID" />
+      </EndProperty>
+      <EndProperty Name="BmsBloodDonorDonation">
+        <ScalarProperty Name="BloodDonationID" ColumnName="BloodDonationID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

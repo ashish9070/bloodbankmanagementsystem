@@ -1,0 +1,14 @@
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\BMS.DataAccessLayer.dll.config
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\BMS.DataAccessLayer.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\BMS.DataAccessLayer.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\BMS.Entities.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\BMS.Exceptions.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\BMS.Entities.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\BMS.Exceptions.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\obj\Debug\BMS.DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\obj\Debug\BMS.DataAccessLayer.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.DataAccessLayer\obj\Debug\BMS.DataAccessLayer.pdb
