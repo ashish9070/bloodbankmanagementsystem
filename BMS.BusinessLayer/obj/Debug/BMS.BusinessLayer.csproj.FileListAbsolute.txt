@@ -1,0 +1,11 @@
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\bin\Debug\BMS.BusinessLayer.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\bin\Debug\BMS.BusinessLayer.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\bin\Debug\BMS.DataAccessLayer.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\bin\Debug\BMS.Entities.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\bin\Debug\BMS.Exceptions.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\bin\Debug\BMS.DataAccessLayer.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\bin\Debug\BMS.Entities.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\bin\Debug\BMS.Exceptions.pdb
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\obj\Debug\BMS.BusinessLayer.csprojResolveAssemblyReference.cache
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\obj\Debug\BMS.BusinessLayer.dll
+D:\AruSah\BMS Mini Project\MiniProject\Application\SolutionBMS\BMS.BusinessLayer\obj\Debug\BMS.BusinessLayer.pdb
